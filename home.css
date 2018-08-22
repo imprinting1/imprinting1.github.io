@@ -1,0 +1,79 @@
+body{
+    background-image: url("flower.png");
+    background-position-x: 125%;
+    background-position-y: 77%;
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+#img1{
+    display : block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    position:center;
+    }
+
+
+#txt1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10;
+    text-align: center;
+}
+
+.nav {
+    background-color: #333;
+    font-family: Arial;
+    list-style: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: table;
+    width: 100%;
+    position: fixed;
+    table-layout: fixed;
+   
+    
+}
+.tab {
+    display: table-cell;
+    margin-right: 1px;
+}
+.nav a{
+   
+    display: block;;
+    padding: 10px;
+    color: #fff;
+    background-color: #333;
+    text-decoration: none;
+}
+.nav a:hover {
+    color: #fff;
+    background-color: #6b0c36;
+}
+.nav ul {
+    background-color: #fff; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+    background: rgba(255,255,255,0); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+    list-style: none;
+   
+    display:none;
+}
+.nav ul li {
+    padding-top: 1px; /* Introducing a padding between the li and the a give the illusion spaced items */
+    float: none;
+}
+.nav ul a {
+    white-space: nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+}
+.nav li:hover ul { /* Display the dropdown on hover */
+    display: block;
+}
+.nav li:hover a { /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+    background-color: #6b0c36;
+    text-decoration: underline;
+}
+.nav li:hover ul a { /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+    text-decoration: none;
+}
+.nav li:hover ul li a:hover { /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+    background-color: #333;
+}
